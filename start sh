@@ -10,12 +10,10 @@ tmate -S /tmp/tmate.sock new-session -d
 tmate -S /tmp/tmate.sock wait tmate-ready
 
 # Print SSH and web access link
-echo "=============================="
-echo "✅ Tmate SSH session ready:"
+echo "SSh access:"
 tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}'
-echo "🌐 Web URL:"
+echo "Web access (read-write):"
 tmate -S /tmp/tmate.sock display -p '#{tmate_web}'
-echo "=============================="
 
 # Keep service running forever
 while true; do
